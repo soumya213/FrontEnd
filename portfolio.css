@@ -21,10 +21,11 @@ h3{
   font-size:1rem;
   color:white
 }
-p,li{
+p,ol{
   font-size: 0.8rem;
   color:white;
 }
+
 .parent{
   display: flex;
   flex-direction: column;
@@ -50,6 +51,7 @@ p,li{
 .content{
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
 }
 
 .heading{
@@ -81,6 +83,10 @@ p,li{
 
 @media only screen and (min-width: 768px) {
   /* Desktop */
+  h3{
+    font-size:1rem;
+    color:white
+  }
   .content{
     flex-direction: row;
   }
@@ -89,15 +95,15 @@ p,li{
     box-shadow: 2px 2px 2px #00FFFF;
     border-radius: 50%;
     max-height: 10vh;
-    max-width: 20vw;
+    max-width: 15vw;
   }
   .details{
-    width: 80vw;
+    width: 70vw;
   }
 
 }
 
-@media only screen and (min-width:480px) and (max-width:767px) {
+@media only screen and (min-width:480px) and (max-width:768px) {
   /* Tablet */
   .content{
     flex-direction: row;
@@ -107,7 +113,7 @@ p,li{
     box-shadow: 2px 2px 2px #00FFFF;
     border-radius: 50%;
     max-height: 10vh;
-    max-width: 10vw;
+    min-width: 20vw;
   }
   .details{
     width: 60vw;
@@ -116,8 +122,9 @@ p,li{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   /* Mobile */
+
   .content{
     flex-direction: column;
     justify-content: space-around;
