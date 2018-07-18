@@ -1,0 +1,266 @@
+:root {
+  font-size: 15px;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  padding: 0vw 2vw 2vw 2vw;
+  width: 95vw;
+  max-height: 2.4vh;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #00284d;
+  color: white;
+  box-shadow: 2px 2px 2px 2px black;
+  font-size: 1.5rem;
+}
+
+#nav-item {
+  padding-top: 1.2vh;
+}
+.border{
+  border-radius: 25px;
+  outline: none;
+
+}
+
+
+* {
+  margin: 0px;
+  padding: 0px
+}
+
+li {
+  min-width: 10vw;
+}
+
+.container ul li {
+  min-width: 10vw;
+  list-style: none;
+  color: white;
+  background: #00284d;
+  margin-top: 1vh;
+  padding: 2vh
+}
+
+.container ul li:hover {
+  background-color: green;
+}
+
+/* Css for navbar */
+
+.dissapear {
+  display: none;
+}
+
+/* Login */
+
+.login {
+  color: white;
+  margin-top: 40vh;
+  margin-left: 30vw;
+  z-index:1;
+  position: absolute;
+  background: white;
+  width:30vw;
+  height:30vh;
+  color:black;
+  border-radius: 30px 0px 30px 30px;
+}
+
+.login input{
+  width:27vw;
+  height:5vh;
+  text-align: center;
+}
+
+
+.close{
+  float: right;
+  margin-bottom: 2vh;
+  padding-bottom: 2vh;
+}
+
+/* Movie Details */
+
+.content{
+  margin:10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+img{
+  width:20vw;
+  height: 39vh;
+}
+
+.image{
+    height:45vh;
+    border:2px solid blue;
+}
+
+h4,h5{
+  text-align: center;
+  position:relative;
+}
+
+h5{
+  margin-bottom: 1.5vh
+}
+
+input{
+  font-weight: bold;
+}
+
+.movie-name{
+  display: flex;
+  flex-direction:column;
+  margin-bottom: 1vh;
+}
+
+.movie-description{
+  width:20vw;
+  height:45vh;
+  position: absolute;
+}
+
+.login input{
+  margin: 3vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Media Query */
+
+/* Smartphones  ----------- */
+@media only screen and  (max-width : 480px) {
+
+.heading-theme{
+  display:none;
+}
+
+.searchbar{
+  display: none;
+}
+
+.searchbar-ipad input{
+  text-align: center;
+  width:80vw;
+  height:5vh;
+  box-shadow: 0.5vh 0.5vh 0.5vh 0.5vh blue;
+}
+
+.movie-name{
+  justify-content: center;
+}
+
+.image{
+  width:60vw;
+}
+
+.image img{
+  height:39vh;
+  width:60vw
+}
+
+.login{
+  margin-left: 5vw;
+  width:80vw;
+}
+
+.login input{
+  width:65vw;
+}
+
+.movie-description{
+  width:50vw;
+  height:45vh;
+}
+
+.nav{
+  max-height: 4vh;
+  font-size: 1rem;
+}
+
+}
+
+/* iPads ----------- */
+@media only screen and (min-width :480px) and (max-width : 900px) {
+
+.heading-theme{
+  font-size:1rem ;
+}
+
+
+.searchbar{
+  display: none;
+}
+
+.searchbar-ipad input{
+  text-align: center;
+  width:80vw;
+  height:5vh;
+  box-shadow: 0.5vh 0.5vh 0.5vh 0.5vh blue;
+}
+
+.image{
+  width:35vw;
+}
+
+.image img{
+  height:39vh;
+  width:35vw;
+}
+
+.login{
+  margin-left: 20vw;
+  width:50vw;
+}
+
+.login input{
+  width:45vw;
+}
+
+.movie-description{
+  width:35vw;
+  height:45vh;
+}
+.nav{
+  max-height: 3vh;
+}
+}
+
+/* Desktop */
+@media only screen and (min-width :900px) {
+
+  .searchbar input{
+    text-align: center;
+    width: 40vw;
+    box-shadow: 0.5vh 0.5vh 0.5vh 0.5vh blue
+  }
+
+  .searchbar-ipad input{
+    text-align: center;
+    width:80vw;
+    height:5vh;
+    box-shadow: 0.5vh 0.5vh 0.5vh 0.5vh blue;
+    display: none;
+  }
+
+}
