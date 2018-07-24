@@ -1,33 +1,50 @@
 $(document).ready(function() {
 
-  $(".searchMovie").keypress(function() {
-    let search = event.target.value;
-    let searchCriteria = ''
+  $(".submit").click(function() {
+    let search = $('.searchMovie').val();
+    let date = $(".date").val();
+    let searchCriteria = '';
     let string = /^[a-zA-Z\s,:]+$/;
     let number = /^[0-9\s]+$/;
     let alphanumeric = /^[0-9a-zA-Z\s]+$/;
 
-    if (search.match(string)) {
-      searchCriteria = 't'
-    } else if (search.match(number)) {
-      searchCriteria = 'y'
-    } else if (search.match(alphanumeric)) {
-      searchCriteria = 'i'
+    //check if date mentioned is a number
+    if (date % 2 == 0 || date % 2 == 1||date=='') {
+      $(".date").css({"border-color": ""});
+      if (search.match(string)) {
+        searchCriteria = 't'
+      } else if (search.match(alphanumeric)) {
+        searchCriteria = 'i'
+      }
+
+      moviefinder(search, searchCriteria, date);
+
+    } else {
+      $(".date").css({"border-color": "red"});
+      $(".movieDetail").html(
+        `
+        <p class="topPadding">Please check the date entered.Only number allowed.</p>
+        `
+      );
+      $('p').css({"color":"red"});
+
+
+
+
     }
 
-    moviefinder(search, searchCriteria);
 
   })
 
 })
 
-let moviefinder = (search, searchCriteria) => {
+let moviefinder = (search, searchCriteria, date) => {
 
   $.ajax({
     type: 'GET',
     dataType: 'json',
     async: true,
-    url: 'https://www.omdbapi.com/?' + searchCriteria + '=' + search + '&apikey=51f2f007',
+    url: 'https://www.omdbapi.com/?' + searchCriteria + '=' + search + '&y=' + date + '&apikey=51f2f007',
     success: (response) => {
       $("p").remove()
 

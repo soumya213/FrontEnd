@@ -23,9 +23,11 @@
   <br>
   <main role="main" class="container">
 
-    <div class="starter-template">
-      <input class="searchMovie form-control" type="text" name="" value="" placeholder="Enter the movie title/id/date">
-      <p class="topPadding">Please enter the movie name/IMDB Id/Year to find the movie</p>
+    <div class="starter-template row">
+      <input class="searchMovie form-control col-md-6 col-sm-12" type="text" name="" value="" placeholder="Enter the movie title/IMDBid">
+      <input class="date form-control  col-md-4 col-sm-6" type="text" pattern="[0-9.]+" name="" value="" placeholder="Please enter the Year of release ">
+      <button type="submit" class="btn btn-default col-md-2 col-sm-6 submit">Submit</button>
+      <p class="topPadding remark">Please enter the movie name/IMDB Id and Year to search the movie</p>
     </div>
 
     <div class="test">
