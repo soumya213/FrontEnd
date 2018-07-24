@@ -70,10 +70,10 @@ let moviefinder = (search, searchCriteria) => {
           )
         }
 
-        for (var key in response) {
+        for (let key in response) {
           if (typeof(response[key]) == typeof(response)) {
-            for (var element in response[key]) {
-              for (var value in response[key][element]) {
+            for (let element in response[key]) {
+              for (let value in response[key][element]) {
                 $('.value').append(
                   `<p><strong>${value}</strong> : ${response[key][element][value]}</p>
                   `
@@ -94,7 +94,7 @@ let moviefinder = (search, searchCriteria) => {
     },
 
     error: (err) => {
-      alert(err.responseJSON.error.message)
+      console.log(err.responseJSON.error.message);
     },
     timeout: 3000
 
