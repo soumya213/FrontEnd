@@ -1,0 +1,16 @@
+.border-book{
+    border:1px solid green;
+    padding: 2px;
+}
+
+.border{
+    border: 1px solid black;
+    padding-bottom: 2vh;
+}
+
+
+
+.card-body{
+    height: 35vh ;
+    overflow-y: scroll;
+}

@@ -1,0 +1,77 @@
+<div class="container-fluid">
+
+  <h2>Books</h2>
+  <div class="row row-horizon" style="text-align:center">
+    <div *ngFor="let book of allBooks" class="col-sm-3 com-md-3 col-12">
+      <div class="card text-center">
+        <div class="card-body border">
+          <h4 class="card-title">{{book.name}}</h4>
+          <p class="card-text">
+            <strong>Authors:</strong> {{book.authors}}
+            <br>
+            <strong>MediaType:</strong> {{book.mediaType}}
+            <br>
+            <strong>Number of Pages:</strong> {{book.numberOfPages}}
+            <br>
+            <strong>Published By:</strong>{{book.publisher}}
+            <br>
+            <strong>Release Date:</strong> {{book.released | date}}
+          </p>
+          <a [routerLink]="['/bookView',book.url]" class=" btn btn-primary">See More</a>
+        </div>
+      </div>
+      <br/>
+    </div>
+  </div>
+
+<!-- Houses -->
+<h2>Houses</h2>
+<div class="row row-horizon" style="text-align:center">
+  <div *ngFor="let house of allHouses" class="col-sm-3 com-md-3 col-12">
+    <div class="card text-center">
+      <div class="card-body border">
+        <h4 class="card-title">{{house.name}}</h4>
+        <p class="card-text">
+          <strong>Region:</strong> {{house.region}}
+          <br>
+          <strong>Coat Of Arms:</strong> {{house.coatOfArms==''?'Not Mentioned':house.seats}}
+          <br>
+          <strong>Seats:</strong> {{house.seats==''?'Not Mentioned':house.seats}}
+          <br>
+          <strong>Founded:</strong> {{house.founded==''?'Not Mentioned':house.founded}}
+        </p>        
+        <a [routerLink]="['/houseView',house.url]" class="btn btn-primary">See More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Charcter -->
+
+  <h2>Characters</h2>
+  <div class="row row-horizon" style="text-align:center">
+    <div *ngFor="let character of allCharacter" class="col-sm-3 com-md-3 col-12">
+      <div class="card text-center">
+        <div class="card-body border">
+          <h4 class="card-title">{{character.aliases}}</h4>
+          <p class="card-text">
+            <strong>Gender:</strong> {{character.gender }}
+            <br>
+            <strong>Culture:</strong> {{character.culture==''?'Not Mentioned':character.culture}}
+            <br>
+            <strong>Born:</strong> {{character.born==''?'Not Mentioned':character.born}}
+            <br>
+            <strong>Died:</strong>{{character.died==''?'Not Mentioned':character.died}}
+            <br>
+            <strong>Titles:</strong> {{character.titles==''?'Not Mentioned':character.titles}}
+          </p>
+          <a [routerLink]="['/characterView',character.url]" class="btn btn-primary">See More</a>
+        </div>
+      </div>
+      <br/>
+    </div>
+  </div>
+
+
+</div>
