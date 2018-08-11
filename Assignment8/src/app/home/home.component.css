@@ -11,6 +11,5 @@
 
 
 .card-body{
-    height: 35vh ;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }

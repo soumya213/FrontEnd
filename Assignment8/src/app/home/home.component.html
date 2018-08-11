@@ -3,8 +3,8 @@
   <h2>Books</h2>
   <div class="row row-horizon" style="text-align:center">
     <div *ngFor="let book of allBooks" class="col-sm-3 com-md-3 col-12">
-      <div class="card text-center">
-        <div class="card-body border">
+      <div class="card text-center border">
+        <div class="card-body">
           <h4 class="card-title">{{book.name}}</h4>
           <p class="card-text">
             <strong>Authors:</strong> {{book.authors}}
@@ -17,8 +17,8 @@
             <br>
             <strong>Release Date:</strong> {{book.released | date}}
           </p>
-          <a [routerLink]="['/bookView',book.url]" class=" btn btn-primary">See More</a>
         </div>
+        <div class="card-footer text-muted"><a [routerLink]="['/bookView',book.url]" class=" btn btn-primary">See More</a></div>
       </div>
       <br/>
     </div>
@@ -28,8 +28,8 @@
 <h2>Houses</h2>
 <div class="row row-horizon" style="text-align:center">
   <div *ngFor="let house of allHouses" class="col-sm-3 com-md-3 col-12">
-    <div class="card text-center">
-      <div class="card-body border">
+    <div class="card text-center border">
+      <div class="card-body">
         <h4 class="card-title">{{house.name}}</h4>
         <p class="card-text">
           <strong>Region:</strong> {{house.region}}
@@ -40,8 +40,8 @@
           <br>
           <strong>Founded:</strong> {{house.founded==''?'Not Mentioned':house.founded}}
         </p>        
-        <a [routerLink]="['/houseView',house.url]" class="btn btn-primary">See More</a>
       </div>
+      <div class="card-footer text-muted"><a [routerLink]="['/houseView',house.url]" class="btn btn-primary">See More</a></div>
     </div>
   </div>
 </div>
@@ -52,8 +52,8 @@
   <h2>Characters</h2>
   <div class="row row-horizon" style="text-align:center">
     <div *ngFor="let character of allCharacter" class="col-sm-3 com-md-3 col-12">
-      <div class="card text-center">
-        <div class="card-body border">
+      <div class="card text-center border">
+        <div class="card-body">
           <h4 class="card-title">{{character.aliases}}</h4>
           <p class="card-text">
             <strong>Gender:</strong> {{character.gender }}
@@ -66,8 +66,8 @@
             <br>
             <strong>Titles:</strong> {{character.titles==''?'Not Mentioned':character.titles}}
           </p>
-          <a [routerLink]="['/characterView',character.url]" class="btn btn-primary">See More</a>
         </div>
+        <div class="card-footer text-muted"><a [routerLink]="['/characterView',character.url]" class="btn btn-primary">See More</a></div>
       </div>
       <br/>
     </div>

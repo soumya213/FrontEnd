@@ -9,12 +9,12 @@ import {HttpErrorResponse,HttpClientModule, HttpClient} from "@angular/common/ht
 export class ApiServiceService {
 
   
-  // public baseUrl:"https://www.anapioficeandfire.com/api/"
+  public baseUrl="https://www.anapioficeandfire.com/api/"
   constructor(private _http:HttpClient) {}
 
   
    getAllBooks(): any {
-    let allBooks = this._http.get("https://www.anapioficeandfire.com/api/books")
+    let allBooks = this._http.get(this.baseUrl+"books")
     return allBooks;
   }// end get all books
 
@@ -24,7 +24,7 @@ export class ApiServiceService {
   }//end get perticularBook
 
   getAllCharacter():any{
-    let allCharacter=this._http.get("https://www.anapioficeandfire.com/api/characters")
+    let allCharacter=this._http.get(this.baseUrl+"characters")
     return allCharacter
   }//end getAllCharacter
 
@@ -35,7 +35,7 @@ export class ApiServiceService {
   }//end getPerticularCharacter
 
   getAllHouses():any{
-    let allHouses=this._http.get("https://www.anapioficeandfire.com/api/houses")
+    let allHouses=this._http.get(this.baseUrl+"houses")
     return allHouses
   }//end getAllHouses
 
