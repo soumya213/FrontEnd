@@ -3,7 +3,7 @@
   <h2>Books</h2>
   <div class="row row-horizon" style="text-align:center">
     <div *ngFor="let book of allBooks" class="col-sm-3 com-md-3 col-12">
-      <div class="card text-center border">
+      <div class="card text-center border-book">
         <div class="card-body">
           <h4 class="card-title">{{book.name}}</h4>
           <p class="card-text">
@@ -28,7 +28,7 @@
 <h2>Houses</h2>
 <div class="row row-horizon" style="text-align:center">
   <div *ngFor="let house of allHouses" class="col-sm-3 com-md-3 col-12">
-    <div class="card text-center border">
+    <div class="card text-center border-house">
       <div class="card-body">
         <h4 class="card-title">{{house.name}}</h4>
         <p class="card-text">
@@ -52,7 +52,7 @@
   <h2>Characters</h2>
   <div class="row row-horizon" style="text-align:center">
     <div *ngFor="let character of allCharacter" class="col-sm-3 com-md-3 col-12">
-      <div class="card text-center border">
+      <div class="card text-center border-character">
         <div class="card-body">
           <h4 class="card-title">{{character.aliases}}</h4>
           <p class="card-text">
