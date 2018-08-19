@@ -1,0 +1,85 @@
+
+body,
+#slider,
+.wrap,
+.slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.wrap {
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.slide0 {
+  background-image: url('./Image/Africa.jpg');
+}
+
+.slide1 {
+  background-image: url('./Image/Americas.jpg');
+}
+.slide2 {
+    background-image: url("./Image/Asia.jpg");
+  }
+.slide3 {
+    background-image: url('./Image/Europe.jpg');
+  }
+.slide4 {
+      background-image: url("./Image/Oceania.jpg");
+    }
+  
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.slide-content span{
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.slide-content a{
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(150, 42, 42);
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 20px 30px 20px 0;
+  border-color: transparent white transparent transparent;
+  left: 0;
+  margin-left: 10px;
+}
+
+#arrow-right {
+  border-width: 20px 0 20px 30px;
+  border-color: transparent transparent transparent white;
+  right: 0;
+  margin-right: 10px;
+}

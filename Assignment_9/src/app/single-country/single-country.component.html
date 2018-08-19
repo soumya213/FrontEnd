@@ -1,0 +1,51 @@
+<div class="container-fluid" style="background-image: url(https://restcountries.eu/data/alb.svg);height:100vh;width:100vw;overflow-y:scroll">
+  <a class="btn btn-primary" [routerLink]="['/']" style="margin-top:8vh;position: relative">Home</a>
+  <a class="btn btn-warning" (click)="goBack()" style="margin-top:8vh;margin-left: 2vw;position: relative">Go Back </a>
+
+  <div class="container content" style="margin-top: 2vh">
+    <div class="row">
+      <div class="col ">
+        <ul class="list-group left">
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="list-group right">
+        </ul>
+
+        <div class="list-group object">
+            
+            
+        </div>
+
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col">
+          <div class="list-group">
+              <a class="list-group-item list-group-item-action active">
+                Currency
+              </a>
+              <a class="list-group-item list-group-item-action">Code:{{currency["code"]}}</a>
+              <a class="list-group-item " [routerLink]="['/allCountry',currency.name+'*c*']">Name:{{currency.name}}</a>
+              <a class="list-group-item list-group-item-action">Symbol:{{currency["symbol"]}}</a>
+            </div>
+
+      </div>
+      <div class="col">
+          <div class="list-group">
+              <a class="list-group-item list-group-item-action active">
+                Language
+              </a>
+              <div *ngFor="let item of language | keyvalue">
+                  <a class="list-group-item list-group-item-action" [routerLink]="['/allCountry',language['name']+'*l*']">{{item.key}}:{{item.value}}</a>
+                  
+              </div>
+            </div>
+      </div>
+    </div>
+
+      
+
+  </div>
+</div>

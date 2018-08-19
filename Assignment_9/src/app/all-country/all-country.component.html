@@ -1,0 +1,53 @@
+<br><br><br>
+
+
+<div class="container">
+  <div class="row">
+      <a class="btn btn-primary" [routerLink]="['/']">Home</a>
+      <a class="btn btn-warning" (click)="goBack()" style="margin-left: 2vw">Go Back </a>
+  </div>
+    <div class='row heading'><p class="para"></p></div>
+  <div class="row" *ngIf="countryData.length>0">
+
+      <div class="card col-md-4 col-xs-12 col-sm-6 " *ngFor="let country of countryData" style="width: 18rem;margin-bottom: 2vh" >
+        <img class="card-img-top" src="{{country.flag}}" alt="Country Flag" style="height:30vh;">
+        <div class="card-body">
+          <h5 class="card-title">{{country.name}}</h5>
+          <p class="card-text">Please find brief about {{country.name}} below</p>
+          <p>
+          <Strong>Capital</Strong>:{{country.capital}}<br>
+          <Strong>TimeZone</Strong>:{{country.timezones[0]}}<br>
+          <Strong>Population</Strong>:{{country.population}}<br>
+          </p>
+          <a class="btn btn-primary click" [routerLink]="['/singleCountry',country.name]">Explore More</a>
+          </div>
+      </div>
+
+  </div>
+
+  <div class="row" >
+      <div class="card col-md-4 col-xs-12 col-sm-6 " style="width: 18rem;margin-bottom: 2vh" >
+        <img class="card-img-top" src="{{countryData.flag}}" alt="Country Flag" style="height:30vh;">
+        <div class="card-body">
+          <h5 class="card-title">{{countryData.name}}</h5>
+          <p class="card-text">Please find brief about {{countryData.name}} below</p>
+          <p>
+          <Strong>Capital</Strong>:{{countryData.capital}}<br>
+          <Strong>TimeZone</Strong>:{{countryData.timezones}}<br>
+          <Strong>Population</Strong>:{{countryData.population}}<br>
+          </p>
+          <a class="btn btn-primary click" [routerLink]="['/singleCountry',countryData.name]">Explore More</a>
+          </div>
+      </div>
+
+  </div>
+ 
+
+  <div class="row">
+
+      
+  </div>
+
+  
+
+</div>
