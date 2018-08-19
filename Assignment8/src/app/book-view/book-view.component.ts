@@ -13,9 +13,10 @@ import { Location } from '@angular/common';
 })
 export class BookViewComponent implements OnInit {
   public perticularBookData:any;
+  public normalKey=[];
  
   
-  constructor(private _location:Location,private _route:ActivatedRoute,private router:Router,public apiService:ApiServiceService) { }
+  constructor(private _location?:Location,private _route?:ActivatedRoute,private router?:Router,public apiService?:ApiServiceService) { }
 
   ngOnInit() {
     let blogUrl=this._route.snapshot.paramMap.get("bookUrl")
@@ -28,12 +29,14 @@ export class BookViewComponent implements OnInit {
         console.log(this.perticularBookData);
         for (let  key in this.perticularBookData ) {
           if (typeof(this.perticularBookData[key])==='object') {
-            $(".card-body").append(`<strong>${key.toUpperCase()}</strong><br>`)
+            $(".key").append(`<strong>${key.toUpperCase()}</strong><br>`)
             for(let x in this.perticularBookData[key] ){              
-              $(".card-body").append(`${this.perticularBookData[key][x]}<br>`)
+              $(".value").append(`${this.perticularBookData[key][x]}<br>`)
             }
           } else {
-            $(".card-body").append(`<strong>${key.toUpperCase()}</strong> : ${this.perticularBookData[key]}<br>`)
+            this.normalKey.push(key)
+            $(".key").append(`<strong>${key.toUpperCase()} :</strong><br>`)
+            $(".value").append(`${this.perticularBookData[key]}<br>`)
           }
           }
         return this.perticularBookData
@@ -50,5 +53,14 @@ export class BookViewComponent implements OnInit {
   this._location.back();
 }
  
+getNormalKey(){
+  console.log("HI");
+  console.log(this.normalKey);
+  
 }
 
+}
+
+
+let bookView = new BookViewComponent()
+bookView.getNormalKey()
