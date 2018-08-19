@@ -15,8 +15,8 @@ import { SingleCountryComponent } from './single-country/single-country.componen
     AppComponent,
     RegionViewComponent,
     AllCountryComponent,
-    NotFoundComponent,
     SingleCountryComponent,
+    NotFoundComponent,
 
   ],
   imports: [
@@ -27,9 +27,8 @@ import { SingleCountryComponent } from './single-country/single-country.componen
       {path:'',redirectTo:'home',pathMatch:'full'},
       {path:'allCountry/:region',component:AllCountryComponent},
       {path:'singleCountry/:country',component:SingleCountryComponent},
-
-      // { path: '**', component: RegionViewComponent }
-
+      {path:'**',component:NotFoundComponent}
+      
     ])
   ],
   providers: [],
